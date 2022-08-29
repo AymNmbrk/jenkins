@@ -21,7 +21,6 @@ pipeline {
 
     stage('DEPLOY') {
       steps {
-        sh 'rm -r /var/lib/tomcat9/webapps/spark*'
         sh 'cp target/*war /usr/lib/tomcat9/webapps/spark.war'
       }
     }
